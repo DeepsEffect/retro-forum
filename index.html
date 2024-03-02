@@ -11,19 +11,20 @@
 </head>
 
 <body class="font-mulish">
-    <header
-        class="container mx-auto lg:mt-10">
+    <!--! header section -->
+    <header class="container mx-auto lg:mt-10">
         <div class="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
             <nav aria-label="main navigation"
                 class="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-700" role="navigation">
-                <!-- Brand logo -->
+                <!--! Brand logo -->
                 <a id="WindUI" aria-label="WindUI logo" aria-current="page"
                     class="flex items-center gap-2 py-3 whitespace-nowrap focus:outline-none lg:flex-1 font-extrabold text-2xl lg:text-4xl"
                     href="javascript:void(0)">
                     MidNight
                 </a>
-                <!-- Navigation links -->
-                <ul role="menubar" aria-label="Select page" class="hidden lg:flex gap-x-5 relative right-8 justify-center items-center">
+                <!--! Navigation links -->
+                <ul role="menubar" aria-label="Select page"
+                    class="hidden lg:flex gap-x-5 relative right-8 justify-center items-center">
                     <li role="none" class="flex items-stretch w-8 h-8 bg-[#0b0b2b21] rounded-full">
                         <img src="./icons/home.svg" alt="home icon">
                     </li>
@@ -38,16 +39,64 @@
                     </li>
                 </ul>
                 <div class="flex items-center px-6 ml-auto lg:ml-0 lg:p-0">
-                    <button
-                        class=" btn btn-primary rounded-full bg-[#797DFC] border-none lg:px-10">
+                    <button class=" btn btn-primary rounded-full bg-[#797DFC] border-none lg:px-10">
                         <span class="font-bold lg:text-lg">sign In</span>
                     </button>
                 </div>
             </nav>
         </div>
     </header>
-    <main>
-
+    <main class="container mx-auto">
+        <!--! banner section -->
+        <section class="lg:p-6">
+            <div
+                class="hero lg:h-[550px] bg-[url(./images/bgbanner.png)] bg-no-repeat bg-cover bg-[#12132D] bg-bottom rounded-3xl flex justify-evenly items-center">
+                <div class="hero-content text-neutral-content">
+                    <div class="max-w-md">
+                        <h1 class="mb-5 text-6xl font-extrabold">Welcome to the <span class="color-primary">MidNight</span> Forum</h1>
+                        <p class="mb-5">Share your favorite opinion and win and wp forum coffee mug!</p>
+                        <!--! input field -->
+                        <div>
+                            <form class="max-w-sm ">
+                                <label for="default-search"
+                                    class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                        </svg>
+                                    </div>
+                                    <input type="search" id="default-search"
+                                        class="rounded-full block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        placeholder="Search Anything Here..." required />
+                                    <button type="submit"
+                                        class="text-white absolute end-2.5 bottom-2.5 bg-[#797DFC] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium px-8 text-sm py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 rounded-full">Search</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--! stat -->
+                <div class="stats shadow lg:w-[370px] lg:h-[250px] hidden lg:flex text-2xl font-medium">
+                    <div class="stat">
+                        <div class="stat-title flex justify-between">Registered Users
+                            <p>01</p>
+                        </div>
+                        <div class="stat-title flex justify-between">Forum
+                            <p>05</p>
+                        </div>
+                        <div class="stat-title flex justify-between">Topics
+                            <p>01</p>
+                        </div>
+                        <div class="stat-title flex justify-between">Replies
+                            <p>01</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
 
