@@ -10,9 +10,41 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body>
-    <header>
-        
+<body class="font-mulish">
+    <header
+        class="container mx-auto lg:mt-10">
+        <div class="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
+            <nav aria-label="main navigation"
+                class="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-700" role="navigation">
+                <!-- Brand logo -->
+                <a id="WindUI" aria-label="WindUI logo" aria-current="page"
+                    class="flex items-center gap-2 py-3 whitespace-nowrap focus:outline-none lg:flex-1 font-extrabold text-2xl lg:text-4xl"
+                    href="javascript:void(0)">
+                    MidNight
+                </a>
+                <!-- Navigation links -->
+                <ul role="menubar" aria-label="Select page" class="hidden lg:flex gap-x-5 relative right-8 justify-center items-center">
+                    <li role="none" class="flex items-stretch w-8 h-8 bg-[#0b0b2b21] rounded-full">
+                        <img src="./icons/home.svg" alt="home icon">
+                    </li>
+                    <li role="none" class="flex items-stretch w-8 h-8 bg-[#0b0b2b21] rounded-full">
+                        <img src="./icons/pen.svg" alt="">
+                    </li>
+                    <li role="none" class="flex items-stretch w-8 h-8 bg-[#0b0b2b21] rounded-full">
+                        <img src="./icons/add.svg" alt="">
+                    </li>
+                    <li role="none" class="flex items-stretch w-8 h-8 bg-[#0b0b2b21] rounded-full">
+                        <img src="./icons/flag.svg" alt="">
+                    </li>
+                </ul>
+                <div class="flex items-center px-6 ml-auto lg:ml-0 lg:p-0">
+                    <button
+                        class=" btn btn-primary rounded-full bg-[#797DFC] border-none lg:px-10">
+                        <span class="font-bold lg:text-lg">sign In</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
     <main>
 
