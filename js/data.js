@@ -10,6 +10,7 @@ const letsDiscussData = async () => {
 // display data
 const displayPosts = (posts) => {
     const cardContainer = document.getElementById("card-container");
+    cardContainer.innerHTML = "";
     posts.forEach((post) => {
         // console.log(post);
         const newPost = document.createElement("div");
@@ -54,7 +55,7 @@ const displayPosts = (posts) => {
                             <p>5 min</p>
                         </div>
                     </div>
-                    <div onclick="addToBookmark('${post.title}', '${post.view_count
+                    <div onclick="addToBookmark(\`${post.title}\`, '${post.view_count
             }')" class="cursor-pointer">
                         <img src="icons/inbox.svg" alt="">
                     </div>
@@ -114,7 +115,22 @@ const latestPostsData = async () => {
 
     });
 };
+// search functionality
+const searchBtn = document.getElementById('search-btn');
+searchBtn.addEventListener('click', function(event){
+    event.preventDefault();
+    const searchInput = document.getElementById('search-input').value;
+    searchByCategory(searchInput);
+})
 
+const searchByCategory = async(categoryName) => {
+    const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${categoryName}`);
+    const data = await res.json();
+    const posts = data.posts;
+    // console.log(posts)
+    displayPosts(posts);
+    
+}
 
 letsDiscussData();
 latestPostsData();
