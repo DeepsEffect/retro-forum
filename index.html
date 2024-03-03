@@ -56,6 +56,10 @@
         </div>
     </header>
     <main class="container mx-auto lg:px-24">
+        <!--! loading spinner -->
+        <div id="loading-spinner" class="min-h-svh flex justify-center hidden">
+            <span class="loading loading-ring text-primary w-24"></span>
+        </div>
         <!--! banner section -->
         <section class="lg:px-6 lg:mt-12">
             <div
@@ -82,7 +86,8 @@
                                         class="rounded-full block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         placeholder="Search By category" required />
                                     <button type="submit"
-                                        class="text-white absolute end-2.5 bottom-2.5 bg-[#797DFC] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium px-8 text-sm py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 rounded-full" id="search-btn">Search</button>
+                                        class="text-white absolute end-2.5 bottom-2.5 bg-[#797DFC] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium px-8 text-sm py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 rounded-full"
+                                        id="search-btn">Search</button>
                                 </div>
                             </form>
                         </div>
@@ -141,6 +146,7 @@
                 </div>
             </div>
         </section>
+
         <!--! Join forum section -->
         <section class="mt-10 lg:px-6 lg:mt-20 ">
             <div
@@ -189,8 +195,7 @@
             <p class="lg:mt-8">Copyright © 2024 - All right reserved</p>
         </aside>
     </footer>
-    <script src="js/data.js"></script>
-    <script src="js/funtionality.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -66,13 +66,14 @@ const displayPosts = (posts) => {
         `;
         cardContainer.appendChild(newPost);
         // adding avatar active status
-        const avatar = document.getElementById(`avatar-status-${post.id}`)
+        const avatar = document.getElementById(`avatar-status-${post.id}`);
         if (post.isActive) {
-            avatar.classList.add('online');
+            avatar.classList.add("online");
         } else {
-            avatar.classList.add('offline');
+            avatar.classList.add("offline");
         }
     });
+    loadingSpinnerToggle(false);
 };
 // latest post data section
 const latestPostsData = async () => {
@@ -112,25 +113,55 @@ const latestPostsData = async () => {
 </div>
     `;
         newsContainer.appendChild(latestNews);
-
     });
 };
-// search functionality
-const searchBtn = document.getElementById('search-btn');
-searchBtn.addEventListener('click', function(event){
-    event.preventDefault();
-    const searchInput = document.getElementById('search-input').value;
-    searchByCategory(searchInput);
-})
 
-const searchByCategory = async(categoryName) => {
-    const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${categoryName}`);
+//add to book mark
+const addToBookmark = (title, view) => {
+    // console.log(title, view);
+    const bookmarkContainer = document.getElementById("bookmark-cards");
+    const newBookmark = document.createElement("div");
+    newBookmark.classList = `p-4 lg:p-6 text-base font-bold bg-[#fff] flex justify-between items-center shadow-lg rounded-xl`;
+    newBookmark.innerHTML = `
+    <h2 class="w-[212px]">${title}</h2>
+    <div class="flex gap-x-2">
+        <img src="icons/eye.svg" alt="">
+        <p>${view}</p>
+    </div>
+    `;
+    bookmarkContainer.appendChild(newBookmark);
+};
+
+// search functionality
+const searchBtn = document.getElementById("search-btn");
+searchBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    const searchInput = document.getElementById("search-input").value;
+    searchByCategory(searchInput);
+});
+
+const searchByCategory = async (categoryName) => {
+    loadingSpinnerToggle(true);
+    const res = await fetch(
+        `https://openapi.programming-hero.com/api/retro-forum/posts?category=${categoryName}`
+    );
     const data = await res.json();
     const posts = data.posts;
     // console.log(posts)
     displayPosts(posts);
-    
-}
+};
+
+// toggle loading spinner
+const loadingSpinnerToggle = (isLoading) => {
+    const loadingSpinner = document.getElementById("loading-spinner");
+    if (isLoading) {
+        loadingSpinner.classList.remove("hidden");
+    } else {
+        setTimeout(() => {
+            loadingSpinner.classList.add("hidden");
+        }, 2000);
+    }
+};
 
 letsDiscussData();
 latestPostsData();
