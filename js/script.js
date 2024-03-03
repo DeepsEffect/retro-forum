@@ -85,7 +85,7 @@ const latestPostsData = async () => {
     newsData.forEach((news) => {
         // console.log(news);
         const latestNews = document.createElement("div");
-        latestNews.classList = `card lg:w-96 bg-base-100 shadow-xl`;
+        latestNews.classList = `card bg-base-100 shadow-xl`;
         latestNews.innerHTML = `
     <figure><img src="${news.cover_image}"
     alt="Shoes" /></figure>
