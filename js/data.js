@@ -18,7 +18,7 @@ const displayPosts = (posts) => {
         <div class="flex gap-x-6">
         <!-- avatar -->
         <div>
-            <div class="avatar online">
+            <div id="avatar-status-${post.id}" class="avatar">
                 <div class="w-14 rounded">
                     <img
                         src="${post.image}" />
@@ -64,6 +64,13 @@ const displayPosts = (posts) => {
     </div>
         `;
         cardContainer.appendChild(newPost);
+        // adding avatar active status
+        const avatar = document.getElementById(`avatar-status-${post.id}`)
+        if (post.isActive) {
+            avatar.classList.add('online');
+        } else {
+            avatar.classList.add('offline');
+        }
     });
 };
 // latest post data section
@@ -104,8 +111,10 @@ const latestPostsData = async () => {
 </div>
     `;
         newsContainer.appendChild(latestNews);
+
     });
 };
+
 
 letsDiscussData();
 latestPostsData();
