@@ -12,7 +12,7 @@
 
 <body class="font-mulish">
     <!--! header section -->
-    <header class="container mx-auto lg:mt-10">
+    <header class="container lg:px-24 mx-auto lg:mt-10">
         <div class="relative mx-auto max-w-full px-6 lg:max-w-5xl xl:max-w-7xl 2xl:max-w-[96rem]">
             <nav aria-label="main navigation"
                 class="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-700" role="navigation">
@@ -25,20 +25,24 @@
                 <!--! Navigation links -->
                 <ul role="menubar" aria-label="Select page"
                     class="hidden lg:flex gap-x-5 relative right-8 justify-center items-center">
-                    <li role="none" class="flex items-stretch w-8 h-8 bg-[#0b0b2b21] rounded-full cursor-pointer"
-                        title="Home">
+                    <li role="none"
+                        class="flex items-stretch w-8 h-8 bg-[#0b0b2b21] rounded-full cursor-pointer tooltip hover:tooltip-open"
+                        data-tip="Home">
                         <img src="./icons/home.svg" alt="home icon">
                     </li>
-                    <li role="none" class="flex items-stretch w-8 h-8 bg-[#0b0b2b21] rounded-full cursor-pointer"
-                        title="Edit">
+                    <li role="none"
+                        class="flex items-stretch w-8 h-8 bg-[#0b0b2b21] rounded-full cursor-pointer tooltip hover:tooltip-open"
+                        data-tip="Pen">
                         <img src="./icons/pen.svg" alt="">
                     </li>
-                    <li role="none" class="flex items-stretch w-8 h-8 bg-[#0b0b2b21] rounded-full cursor-pointer"
-                        title="Add People">
+                    <li role="none"
+                        class="flex items-stretch w-8 h-8 bg-[#0b0b2b21] rounded-full cursor-pointer tooltip hover:tooltip-open"
+                        data-tip="Add People">
                         <img src="./icons/add.svg" alt="">
                     </li>
-                    <li role="none" class="flex items-stretch w-8 h-8 bg-[#0b0b2b21] rounded-full cursor-pointer"
-                        title="Flag">
+                    <li role="none"
+                        class="flex items-stretch w-8 h-8 bg-[#0b0b2b21] rounded-full cursor-pointer tooltip hover:tooltip-open"
+                        data-tip="Flag">
                         <img src="./icons/flag.svg" alt="">
                     </li>
                 </ul>
@@ -50,7 +54,7 @@
             </nav>
         </div>
     </header>
-    <main class="container mx-auto">
+    <main class="container mx-auto lg:px-24">
         <!--! banner section -->
         <section class="lg:p-6">
             <div
@@ -103,7 +107,7 @@
             </div>
         </section>
         <!--! Lets discuss section -->
-        <section>
+        <section class="min-h-svh ">
             <!-- title -->
             <div class="text-center max-w-2xl mx-auto mt-10 space-y-5">
                 <h2 class="text-4xl font-black color-black">Let’s Discuss</h2>
@@ -111,6 +115,37 @@
                     directly within the app. The integrated testing
                     features allow for a streamlined .</p>
             </div>
+            <!-- cards container-->
+            <div id="card-container" class="mt-12 flex flex-col lg:flex-row justify-around">
+                <!--card 1 -->
+                <div class="space-y-5">
+                    <div class="border border-[#797DFC] lg:w-[772px] min-h-[270px] bg-[#7D7DFC1A] rounded-3xl ">
+                        
+                    </div>
+                    <div class="border border-[#797DFC] lg:w-[772px] min-h-[270px] bg-[#7D7DFC1A] rounded-3xl ">
+
+                    </div>
+                </div>
+                <!-- bookmark -->
+                <div class="stats shadow lg:w-[374px] lg:h-[465px] lg:flex text-2xl font-medium">
+                    <div class="stat">
+                        <div class="stat-title flex justify-between">Registered Users
+                            <p>01</p>
+                        </div>
+                        <div class="stat-title flex justify-between">Forum
+                            <p>05</p>
+                        </div>
+                        <div class="stat-title flex justify-between">Topics
+                            <p>01</p>
+                        </div>
+                        <div class="stat-title flex justify-between">Replies
+                            <p>01</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
         </section>
     </main>
     <footer>
