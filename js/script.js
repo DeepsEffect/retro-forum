@@ -14,7 +14,7 @@ const displayPosts = (posts) => {
     posts.forEach((post) => {
         // console.log(post);
         const newPost = document.createElement("div");
-        newPost.classList = `border border-[#797DFC] lg:w-[772px] min-h-[270px] bg-[#7D7DFC1A] rounded-3xl p-5 lg:p-10 transition-transform duration-300 hover:scale-105 hover:bg-[#7D7DFC33]`;
+        newPost.classList = `border border-[#797DFC] lg:w-[772px] min-h-[270px] bg-[#7D7DFC1A] rounded-3xl p-5 lg:p-10 transition-transform duration-300 lg:hover:scale-105 hover:bg-[#7D7DFC33]`;
         newPost.innerHTML = `
         <div class="flex gap-x-6">
         <!-- avatar -->
@@ -56,7 +56,7 @@ const displayPosts = (posts) => {
                         </div>
                     </div>
                     <div onclick="addToBookmark(\`${post.title}\`, '${post.view_count
-            }')" class="cursor-pointer transition transform hover:scale-105">
+            }')" class="cursor-pointer transition transform lg:hover:scale-105">
                         <img src="icons/inbox.svg" alt="">
                     </div>
                 </div>
@@ -85,7 +85,7 @@ const latestPostsData = async () => {
     newsData.forEach((news) => {
         // console.log(news);
         const latestNews = document.createElement("div");
-        latestNews.classList = `card bg-base-100 shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-2xl`;
+        latestNews.classList = `card bg-base-100 shadow-xl transition-transform duration-300 lg:hover:scale-105 hover:shadow-2xl`;
         latestNews.innerHTML = `
     <figure><img src="${news.cover_image}"
     alt="Shoes" /></figure>
