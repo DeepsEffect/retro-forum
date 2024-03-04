@@ -117,9 +117,11 @@ const latestPostsData = async () => {
 };
 
 //add to book mark
+let bookmarkCount = 0;
 const addToBookmark = (title, view) => {
     // console.log(title, view);
     const bookmarkContainer = document.getElementById("bookmark-cards");
+    const bookmarkCounter = document.getElementById('mark-as-read-count');
     const newBookmark = document.createElement("div");
     newBookmark.classList = `p-4 lg:p-6 text-base font-bold bg-[#fff] flex justify-between items-center shadow-lg rounded-xl`;
     newBookmark.innerHTML = `
@@ -130,6 +132,8 @@ const addToBookmark = (title, view) => {
     </div>
     `;
     bookmarkContainer.appendChild(newBookmark);
+    bookmarkCount++;
+    bookmarkCounter.innerText = bookmarkCount;
 };
 
 // search functionality
