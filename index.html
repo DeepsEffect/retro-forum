@@ -19,7 +19,7 @@
             <nav aria-label="main navigation"
                 class="flex h-[5.5rem] items-stretch justify-between font-medium text-slate-700" role="navigation">
                 <!--! Brand logo -->
-                <a id="WindUI" aria-label="WindUI logo" aria-current="page"
+                <a aria-label="WindUI logo" aria-current="page"
                     class="flex items-center gap-2 py-3 whitespace-nowrap focus:outline-none lg:flex-1 font-extrabold text-2xl lg:text-4xl"
                     href="javascript:void(0)">
                     MidNight
@@ -58,7 +58,8 @@
     </header>
     <main class="container mx-auto lg:px-24">
         <!--! loading spinner -->
-        <div id="loading-spinner" class="min-h-svh flex justify-center hidden">
+        <div id="loading-spinner"
+            class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-50 z-50 hidden">
             <span class="loading loading-ring text-primary w-24"></span>
         </div>
         <!--! banner section -->
