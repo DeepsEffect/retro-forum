@@ -149,7 +149,7 @@ const searchByCategory = async (categoryName) => {
     const posts = data.posts;
     // console.log(posts)
     displayPosts(posts);
-    // take me to to the moon **lets discuss section :3
+    // take me to to the moon__ **lets discuss section :3
     const letsDiscuss = document.getElementById('lets-discuss-section');
     setTimeout(() => {
         letsDiscuss.scrollIntoView({ behavior: 'smooth' });
